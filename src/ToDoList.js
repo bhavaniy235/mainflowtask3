@@ -70,7 +70,7 @@ function ToDoList() {
                 <span>{task.text}</span>
                 <div className="actions">
                   <button onClick={() => completeTask(index)}>
-                    {task.completed ? 'Undo' : 'Complete'}
+                    {task.completed ? 'Undo' : 'Done'}
                   </button>
                   <button onClick={() => startEditTask(index)}>Edit</button>
                   <button onClick={() => deleteTask(index)}>Delete</button>
