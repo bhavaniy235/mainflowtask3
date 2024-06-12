@@ -67,9 +67,14 @@ function ToDoList() {
               </>
             ) : (
               <>
-                <span onClick={() => completeTask(index)}>{task.text}</span>
-                <button onClick={() => startEditTask(index)}>Edit</button>
-                <button onClick={() => deleteTask(index)}>Delete</button>
+                <span>{task.text}</span>
+                <div className="actions">
+                  <button onClick={() => completeTask(index)}>
+                    {task.completed ? 'Undo' : 'Complete'}
+                  </button>
+                  <button onClick={() => startEditTask(index)}>Edit</button>
+                  <button onClick={() => deleteTask(index)}>Delete</button>
+                </div>
               </>
             )}
           </li>
